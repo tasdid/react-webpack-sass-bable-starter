@@ -1,0 +1,69 @@
+$navy: #3b352e;
+$green: #15b78f;
+
+html {
+  background-color: $navy;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: monospace;
+}
+
+h1 {
+    color: $green;
+    font-weight: bold;
+    font-size: 3.5rem;
+  
+    &:after {
+      content: '👋';
+      display: inline-block;
+      transform: rotate(-20deg);
+      animation: wave .75s infinite linear alternate;
+    }
+}
+
+circle {
+    cx: 130px;
+    cy: 130px;
+    r: 115px;
+    stroke: #ac1ca0;
+    stroke-width: 30px;
+    fill: #383532;
+}
+  
+@keyframes wave {
+    100% {
+        transform: rotate(20deg);
+    }
+}
+
+sphere {
+    background-color: yellow;
+    height: 200px;
+    width: 220px;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 500%;
+    position: relative;
+    box-shadow: inset -10px -10px 100px #000, 10px 10px 20px black, inset 0px 0px 10px black;
+    display: inline-block;
+    margin: 5%;
+  }
+sphere::after {
+    background-color: rgba(255, 255, 255, 0.3);
+    content: '';
+    height: 45%;
+    width: 12%;
+    position: absolute;
+    top: 4%;
+    left: 15%;
+    border-radius: 50%;
+    transform: rotate(40deg);
+}
